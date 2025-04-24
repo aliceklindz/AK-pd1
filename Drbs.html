@@ -24,28 +24,28 @@ function draw() {
 }
 
 function move(event) {
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'D') {
         x += 10;
     }
 
-    if (event.key === 'ArrowLeft') {
+    if (event.key === 'A') {
         x -= 10;
     }
 
-    if (event.key === 'ArrowDown') {
+    if (event.key === 'S') {
         y += 10;
     }
 
-    if (event.key === 'ArrowUp') {
+    if (event.key === 'W') {
         y -= 10;
     }
 
-    if (event.key === 'G' || event.key === 'g') {
-        currentColor = 'green';
+    if (event.key === 'P' || event.key === 'p') {
+        currentColor = 'pink';
     }
 
-    if (event.key === 'B' || event.key === 'b') {
-        currentColor = 'black';
+    if (event.key === 'w' ) {
+        currentColor = 'WHITE';
     }
 
     if (event.key === 'O' || event.key === 'o') {
@@ -64,8 +64,8 @@ draw();
 
 <ul>
     <li>Kustini kvadrātu ar bultām</li>
-    <li>G - Green</li>
-    <li>B - Black</li>
+    <li>P - pink</li>
+    <li>w - balta</li>
     <li>O - Orange</li>
 </ul>
 
