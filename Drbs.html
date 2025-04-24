@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <h1>Cat In the box</h1>
+</head>
+<body>
+
+
+<canvas id="canv" width="300" height="300" ></canvas>
+
+<script>
+const cav = document.getElementById('canv');
+const ctx = cav.getContext('2d');
+
+let x = 145;
+let y = 145;
+let currentColor = 'black';
+
+function draw() {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, 300, 300);
+    ctx.fillStyle = currentColor;
+    ctx.fillRect(x, y, 30, 30);
+}
+
+function move(event) {
+    if (event.key === 'ArrowRight') {
+        x += 10;
+    }
+
+    if (event.key === 'ArrowLeft') {
+        x -= 10;
+    }
+
+    if (event.key === 'ArrowDown') {
+        y += 10;
+    }
+
+    if (event.key === 'ArrowUp') {
+        y -= 10;
+    }
+
+    if (event.key === 'G' || event.key === 'g') {
+        currentColor = 'green';
+    }
+
+    if (event.key === 'B' || event.key === 'b') {
+        currentColor = 'black';
+    }
+
+    if (event.key === 'O' || event.key === 'o') {
+        currentColor = 'orange';
+    }
+
+    draw();
+}
+
+window.addEventListener('keydown', move);
+
+draw();
+</script>
+
+<p>Kvadrats</p>
+
+<ul>
+    <li>Kustini kvadrātu ar bultām</li>
+    <li>G - Green</li>
+    <li>B - Black</li>
+    <li>O - Orange</li>
+</ul>
+
+<p>Links :D <a href="https://www.google.com/" target="_blank">Google</a> </p>
+
+
+
+<img src="https://media.istockphoto.com/id/545462228/photo/cat-playing-peek-a-boo-in-a-box.jpg?s=612x612&w=0&k=20&c=QlBKIL5t35Fj694ihunakEMK6M9GMs5CRwHCUNPPTeA=" width="150px" height="150px"> 
+
+
+</body>
+</html>
